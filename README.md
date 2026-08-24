@@ -1,2 +1,2 @@
 # Situa-o-aprendizagem-HTML-CSS
-Atividade avaliativa em grupo realizada por: Mguel, Saimon, Wesley e Tatiane
+Atividade avaliativa em grupo realizada por: Miguel, Saimon, Wesley e Tatiane
