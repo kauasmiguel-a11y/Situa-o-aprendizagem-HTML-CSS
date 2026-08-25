@@ -51,25 +51,6 @@ Durante o desenvolvimento, foram considerados aspectos relacionados à experiên
 * Git;
 * GitHub.
 
-**Adicione outras tecnologias utilizadas pela equipe, caso necessário.**
-
----
-
-## Organização do projeto
-
-Adicione aqui a estrutura real das pastas do projeto.
-
-Exemplo:
-
-```text id="x5khk0"
-📁 projeto
-├── 📁 css
-├── 📁 imagens
-├── 📁 pages
-├── index.html
-└── README.md
-```
-
 ---
 
 ## Equipe
