@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDA Metalúrgica - Dashboard de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>DDA Metalúrgica</h2>
+        <nav>
+            <ul>
+                <li><a href="Painel.html" class="active">Dashboard</a></li>
+                <li><a href="pastilhas.html">Pastilhas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Painel Geral do Estoque</h1>
+
+        <section class="kpi-container">
+            <article class="kpi-card">
+                <h3>Total de Pastilhas Cadastradas</h3>
+                <p class="number">1.450</p>
+            </article>
+            <article class="kpi-card warning">  <!--tres tag para criar caixas de destaque (kpis) -->
+                <h3>Itens em Estoque Crítico</h3>
+                <p class="number">12</p>
+            </article>
+            <article class="kpi-card">
+                <h3>Movimentações (Hoje)</h3>
+                <p class="number">48</p>
+            </article>
+        </section>
+
+        <h2>Últimas Movimentações</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data/Hora</th>
+                        <th>Código (SKU)</th>
+                        <th>Pastilha</th>
+                        <th>Tipo</th>
+                        <th>Qtd.</th>
+                        <th>Responsável</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25/08/2026 14:30</td>
+                        <td>PST-CNMG-120408</td> <!-- refere-se a uma pastilha de metal duro (também conhecida popularmente como "vídea")-->
+                        <td>Pastilha Metal Duro CNMG 120408</td>
+                        <td><span class="badge badge-saida">Saída</span></td>
+                        <td>50</td>
+                        <td>João Silva</td>
+                    </tr>
+                    <tr>
+                        <td>25/08/2026 10:15</td>
+                        <td>PST-TNMG-160404</td>
+                        <td>Pastilha Metal Duro TNMG 160404</td>
+                        <td><span class="badge badge-entrada">Entrada</span></td> <!-- As tags <span class="badge ..."> envolvem o texto "Saída" e "Entrada" para aplicar formatação em formato de etiqueta via CSS.-->
+                        <td>200</td>
+                        <td>Maria Santos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Sistema de Gestão de Estoque - DDA Metalúrgica &copy; 2026</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDA Metalúrgica - Cadastro de Pastilhas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2>DDA Metalúrgica</h2>
+        <nav>
+            <ul>
+                <li><a href="Painel.html">Dashboard</a></li>
+                <li><a href="pastilhas.html" class="active">Pastilhas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Gestão de Pastilhas Industriais</h1>
+
+        <section class="form-container">
+            <h2>Cadastrar Nova Pastilha</h2>
+            <form action="#" method="POST" class="form-grid">
+                <div class="form-group">
+                    <label for="sku">Código SKU</label> <!-- codigo de manutenção de estoque-->
+                    <input type="text" id="sku" name="sku" placeholder="Ex: PST-WNMG-080408" required>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição / Modelo</label>
+                    <input type="text" id="descricao" name="descricao" placeholder="Ex: Pastilha WNMG 080408" required>
+                </div>
+                <div class="form-group">
+                    <label for="fabricante">Fabricante</label>
+                    <select id="fabricante" name="fabricante" required>
+                        <option value="">Selecione...</option>
+                        <option value="1">Sandvik Coromant</option>
+                        <option value="2">Iscar</option>
+                        <option value="3">Kennametal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="estoque_min">Estoque Mínimo</label>
+                    <input type="number" id="estoque_min" name="estoque_min" min="1" placeholder="Qtd. mínima" required>
+                </div>
+                <button type="submit" class="btn-submit">Salvar Pastilha</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Sistema de Gestão de Estoque - DDA Metalúrgica &copy; 2026</p>
+    </footer>
+</body>
+</html>
