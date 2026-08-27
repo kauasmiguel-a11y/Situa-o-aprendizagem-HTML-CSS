@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DDA Metalúrgica | Fornecedores</title>
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="logo">
+
+                <h1>DDA Metalúrgica</h1>
+
+                <span>Controle de Estoque</span>
+
+            </div>
+
+
+            <nav class="main-nav">
+
+                <a href="index.html" class="nav-link">
+
+                    <a href="Painel.html">
+                        Dashboard
+                    </a>
+
+
+                    <a href="pastilhas.html" class="nav-link">
+                        Pastilhas
+                    </a>
+
+                    <a href="fornecedores.html" class="nav-link active">
+                        Fornecedores
+                    </a>
+
+                    <a href="relatorios.html" class="nav-link">
+                        Relatórios
+                    </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="main-container">
+
+        <section class="page-header">
+
+            <div class="page-title">
+
+                <h2>Fornecedores</h2>
+
+                <p>
+                    Cadastro e consulta de fornecedores.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CADASTRO -->
+
+        <section class="form-panel">
+
+            <h3>Novo Fornecedor</h3>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="nome">
+                            Nome / Razão Social
+                        </label>
+
+                        <input type="text" id="nome" name="nome" placeholder="Nome do fornecedor">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="cnpj">
+                            CNPJ
+                        </label>
+
+                        <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 0000-0000">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input type="email" id="email" name="email" placeholder="contato@empresa.com">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="cidade">
+                            Cidade
+                        </label>
+
+                        <input type="text" id="cidade" name="cidade">
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit">
+                    Cadastrar Fornecedor
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- LISTA -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <h3>Fornecedores Cadastrados</h3>
+
+                <span>
+                    3 fornecedores
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="data-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Fornecedor</th>
+                            <th>CNPJ</th>
+                            <th>Telefone</th>
+                            <th>Cidade</th>
+                            <th>Avaliação</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Sandvik Coromant
+                            </td>
+
+                            <td>
+                                12.345.678/0001-90
+                            </td>
+
+                            <td>
+                                (47) 3333-1111
+                            </td>
+
+                            <td>
+                                Joinville - SC
+                            </td>
+
+                            <td>
+                                4.5
+                            </td>
+
+                            <td>
+                                <span class="status status-ok">
+                                    Ativo
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Kennametal
+                            </td>
+
+                            <td>
+                                98.765.432/0001-10
+                            </td>
+
+                            <td>
+                                (11) 4004-2222
+                            </td>
+
+                            <td>
+                                São Paulo - SP
+                            </td>
+
+                            <td>
+                                4.0
+                            </td>
+
+                            <td>
+                                <span class="status status-ok">
+                                    Ativo
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Iscar
+                            </td>
+
+                            <td>
+                                11.222.333/0001-44
+                            </td>
+
+                            <td>
+                                (19) 3456-7777
+                            </td>
+
+                            <td>
+                                Campinas - SP
+                            </td>
+
+                            <td>
+                                3.0
+                            </td>
+
+                            <td>
+                                <span class="status status-warning">
+                                    Pendente
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            DDA Metalúrgica - Sistema de Controle de Estoque
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

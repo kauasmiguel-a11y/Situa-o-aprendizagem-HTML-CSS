@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DDA Metalúrgica | Relatórios</title>
+
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="logo">
+
+                <h1>DDA Metalúrgica</h1>
+
+                <span>Controle de Estoque</span>
+
+            </div>
+
+
+            <nav class="main-nav">
+
+                <a href="painel.html">
+                    Dashboard
+                </a>
+
+                <a href="pastilhas.html" class="nav-link">
+                    Pastilhas
+                </a>
+
+                <a href="fornecedores.html" class="nav-link">
+                    Fornecedores
+                </a>
+
+                <a href="relatorios.html" class="nav-link active">
+                    Relatórios
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main class="main-container">
+
+        <section class="page-header">
+
+            <div class="page-title">
+
+                <h2>Relatórios</h2>
+
+                <p>
+                    Consultas e informações do estoque.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FILTRO -->
+
+        <section class="filter-panel">
+
+            <div class="form-group">
+
+                <label for="data-inicial">
+                    Data inicial
+                </label>
+
+                <input type="date" id="data-inicial">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="data-final">
+                    Data final
+                </label>
+
+                <input type="date" id="data-final">
+
+            </div>
+
+            <button type="button">
+                Consultar
+            </button>
+
+        </section>
+
+
+        <!-- RELATÓRIOS -->
+
+        <section class="reports-grid">
+
+
+            <div class="report-card">
+
+                <h3>
+                    Posição de Estoque
+                </h3>
+
+                <p>
+                    Mostra a quantidade atual de todas
+                    as pastilhas cadastradas.
+                </p>
+
+                <a href="#">
+                    Gerar relatório
+                </a>
+
+            </div>
+
+
+            <div class="report-card">
+
+                <h3>
+                    Necessidade de Reposição
+                </h3>
+
+                <p>
+                    Lista as pastilhas que estão
+                    abaixo do estoque mínimo.
+                </p>
+
+                <a href="#">
+                    Gerar relatório
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <p>
+            DDA Metalúrgica - Sistema de Controle de Estoque
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
