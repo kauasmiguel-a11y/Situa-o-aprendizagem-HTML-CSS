@@ -1,56 +1,416 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DDA Metalúrgica - Cadastro de Pastilhas</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>DDA Metalúrgica | Pastilhas</title>
 </head>
+
 <body>
-    <header>
-        <h2>DDA Metalúrgica</h2>
-        <nav>
-            <ul>
-                <li><a href="Painel.html">Dashboard</a></li>
-                <li><a href="pastilhas.html" class="active">Pastilhas</a></li>
-            </ul>
-        </nav>
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="logo">
+
+                <h1>DDA Metalúrgica</h1>
+
+                <span>Controle de Estoque</span>
+
+            </div>
+
+
+            <nav class="main-nav">
+
+                <a href="painel.html" class="nav-link">
+                    Dashboard
+                </a>
+
+                <a href="pastilhas.html" class="nav-link active">
+                    Pastilhas
+                </a>
+
+                <a href="fornecedores.html" class="nav-link">
+                    Fornecedores
+                </a>
+
+                <a href="relatorios.html" class="nav-link">
+                    Relatórios
+                </a>
+
+            </nav>
+
+        </div>
+
     </header>
 
-    <main>
-        <h1>Gestão de Pastilhas Industriais</h1>
 
-        <section class="form-container">
-            <h2>Cadastrar Nova Pastilha</h2>
-            <form action="#" method="POST" class="form-grid">
-                <div class="form-group">
-                    <label for="sku">Código SKU</label> <!-- codigo de manutenção de estoque-->
-                    <input type="text" id="sku" name="sku" placeholder="Ex: PST-WNMG-080408" required>
-                </div>
-                <div class="form-group">
-                    <label for="descricao">Descrição / Modelo</label>
-                    <input type="text" id="descricao" name="descricao" placeholder="Ex: Pastilha WNMG 080408" required>
-                </div>
-                <div class="form-group">
-                    <label for="fabricante">Fabricante</label>
-                    <select id="fabricante" name="fabricante" required>
-                        <option value="">Selecione...</option>
-                        <option value="1">Sandvik Coromant</option>
-                        <option value="2">Iscar</option>
-                        <option value="3">Kennametal</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="estoque_min">Estoque Mínimo</label>
-                    <input type="number" id="estoque_min" name="estoque_min" min="1" placeholder="Qtd. mínima" required>
-                </div>
-                <button type="submit" class="btn-submit">Salvar Pastilha</button>
-            </form>
+    <main class="main-container">
+
+        <section class="page-header">
+
+            <div class="page-title">
+
+                <h2>Pastilhas</h2>
+
+                <p>
+                    Gerenciamento do estoque de pastilhas.
+                </p>
+
+            </div>
+
+
+            <div class="page-actions">
+
+                <a href="#nova-pastilha">
+                    Nova Pastilha
+                </a>
+
+                <a href="#entrada">
+                    Entrada
+                </a>
+
+                <a href="#saida">
+                    Saída
+                </a>
+
+            </div>
+
         </section>
+
+
+        <!-- FILTROS -->
+
+        <section class="filter-panel">
+
+            <div class="filter-group">
+
+                <label for="busca">
+                    Buscar pastilha
+                </label>
+
+                <input type="search" id="busca" name="busca" placeholder="Código ou descrição">
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="status">
+                    Status
+                </label>
+
+                <select id="status" name="status">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="ok">
+                        OK
+                    </option>
+
+                    <option value="baixo">
+                        Baixo
+                    </option>
+
+                    <option value="critico">
+                        Crítico
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="filter-group">
+
+                <label for="fabricante">
+                    Fabricante
+                </label>
+
+                <select id="fabricante" name="fabricante">
+
+                    <option value="todos">
+                        Todos
+                    </option>
+
+                    <option value="sandvik">
+                        Sandvik
+                    </option>
+
+                    <option value="kennametal">
+                        Kennametal
+                    </option>
+
+                    <option value="iscar">
+                        Iscar
+                    </option>
+
+                    <option value="mitsubishi">
+                        Mitsubishi
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- TABELA -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <h3>Itens em Estoque</h3>
+
+                <span>
+                    4 itens cadastrados
+                </span>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table class="data-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>Fabricante</th>
+                            <th>Quantidade</th>
+                            <th>Mínimo</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>P-001</td>
+
+                            <td>
+                                Pastilha TNMG 160408
+                            </td>
+
+                            <td>
+                                Sandvik
+                            </td>
+
+                            <td>
+                                120
+                            </td>
+
+                            <td>
+                                30
+                            </td>
+
+                            <td>
+                                <span class="status status-ok">
+                                    OK
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>P-002</td>
+
+                            <td>
+                                Pastilha CNMG 120408
+                            </td>
+
+                            <td>
+                                Kennametal
+                            </td>
+
+                            <td>
+                                8
+                            </td>
+
+                            <td>
+                                15
+                            </td>
+
+                            <td>
+                                <span class="status status-warning">
+                                    Baixo
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>P-003</td>
+
+                            <td>
+                                Pastilha DCMT 070204
+                            </td>
+
+                            <td>
+                                Iscar
+                            </td>
+
+                            <td>
+                                3
+                            </td>
+
+                            <td>
+                                10
+                            </td>
+
+                            <td>
+                                <span class="status status-critical">
+                                    Crítico
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>P-004</td>
+
+                            <td>
+                                Pastilha VBMT 160408
+                            </td>
+
+                            <td>
+                                Mitsubishi
+                            </td>
+
+                            <td>
+                                45
+                            </td>
+
+                            <td>
+                                25
+                            </td>
+
+                            <td>
+                                <span class="status status-ok">
+                                    OK
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- NOVA PASTILHA -->
+
+        <section id="nova-pastilha" class="form-panel">
+
+            <h3>Nova Pastilha</h3>
+
+            <form>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="codigo">
+                            Código
+                        </label>
+
+                        <input type="text" id="codigo" name="codigo" placeholder="Ex: P-007">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="descricao">
+                            Descrição
+                        </label>
+
+                        <input type="text" id="descricao" name="descricao" placeholder="Ex: Pastilha TNMG 160408">
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="fabricante-novo">
+                            Fabricante
+                        </label>
+
+                        <input type="text" id="fabricante-novo" name="fabricante" placeholder="Ex: mitsubishi">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="estoque-minimo">
+                            Estoque mínimo
+                        </label>
+
+                        <input type="number" id="estoque-minimo" name="estoque-minimo" min="0">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="quantidade-inicial">
+                            Quantidade inicial
+                        </label>
+
+                        <input type="number" id="quantidade-inicial" name="quantidade-inicial" min="0">
+
+                    </div>
+
+                </div>
+
+
+                <button type="submit">
+                    Cadastrar Pastilha
+                </button>
+
+            </form>
+            
+        </section>
+
     </main>
 
-    <footer>
-        <p>Sistema de Gestão de Estoque - DDA Metalúrgica &copy; 2026</p>
+    <footer class="site-footer">
+
+        <p>
+            DDA Metalúrgica - Sistema de Controle de Estoque
+        </p>
+
     </footer>
+
 </body>
+
 </html>
