@@ -228,3 +228,11 @@ h3{
         grid-template-columns: 1fr;
     }
 }
+
+.summary-card{
+    transition: 0.5s;
+}
+
+.summary-card:hover{
+    transform: scale(1.1);
+}
