@@ -115,7 +115,6 @@ body {
     padding: 10px;
 }
 
-
 /* PAINEL */
 
 .panel {
@@ -164,6 +163,49 @@ body {
     background-color: #243342;
 }
 
+/* LISTA DE PASTILHAS */
+
+.lista-pastilhas {
+    display: flex;
+    flex-direction: column;
+}
+
+.pastilha {
+    padding: 18px;
+    border-top: 1px solid #2c3a47;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.pastilha:hover {
+    background-color: #243342;
+}
+
+.pastilha-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pastilha-info strong {
+    color: #5a9cf8;
+}
+
+.pastilha-info span {
+    font-size: 14px;
+}
+
+.pastilha-estoque {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+}
+
 /* STATUS */
 
 .status {
@@ -172,6 +214,26 @@ body {
     font-size: 12px;
 }
 
+/* STATUS OK */
+
+.status-ok {
+    background-color: #1f7a4d;
+    color: white;
+}
+
+/* STATUS BAIXO */
+
+.status-warning {
+    background-color: #b8860b;
+    color: white;
+}
+
+/* STATUS CRÍTICO */
+
+.status-critical {
+    background-color: #a83232;
+    color: white;
+}
 
 /* FORMULÁRIO */
 
@@ -206,7 +268,7 @@ body {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
-    color: white;
+    color: black
 }
 
 .form-group input:focus {
@@ -219,7 +281,6 @@ body {
     border-radius: 6px;
     padding: 10px 18px;
 }
-
 
 /* FOOTER */
 
@@ -258,5 +319,17 @@ body {
 
     .form-row {
         flex-direction: column;
+    }
+
+    /* Ajuste da lista de pastilhas no celular */
+
+    .pastilha {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .pastilha-estoque {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
